@@ -46,5 +46,13 @@ public class UserServiceImpl implements UserService{
 		
 		return this.userRepository.findByUsername(username);
 	}
+
+	//Delete user by id
+	@Override
+	public void deleteUser(Long userId) {
+		
+		this.userRepository.deleteById(userId);
+		
+	}
 	
 }
